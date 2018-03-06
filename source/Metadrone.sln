@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Metadrone", "Metadrone\Metadrone.vbproj", "{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.TextEditor", "ICSharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj", "{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{17A15092-100F-46FE-8B7A-7223C2EBF283}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{B58EBB86-145E-4034-9E47-63B6E2CE4CC3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConsumerApp", "Tests\ConsumerApp\ConsumerApp.vbproj", "{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{169140CA-DA4B-4845-AADD-E31CDFF2CEDA}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Metadrone.vsmdi = Metadrone.vsmdi
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Parsing", "Tests\Parsing\Parsing.vbproj", "{BC1A3EAC-5C84-44B4-900D-F77651737945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourcePlugins.MySQL", "SourcePlugins.MySQL\SourcePlugins.MySQL.csproj", "{75D5C179-7802-4781-AADC-47F2600E9F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourcePlugins.Firebird", "SourcePlugins.Firebird\SourcePlugins.Firebird.csproj", "{3D49C0E8-4B17-4A24-A971-2642D4725685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourcePlugins.PostgreSQL", "SourcePlugins.PostgreSQL\SourcePlugins.PostgreSQL.csproj", "{142518FB-C082-4BE7-88F5-67B4FADCA407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourcePlugins.SQLite", "SourcePlugins.SQLite\SourcePlugins.SQLite.csproj", "{C31F674F-44BF-4E61-B5D6-438EB44C1176}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Metadrone.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AllPlugins|Any CPU = AllPlugins|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1A3EAC-5C84-44B4-900D-F77651737945}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1A3EAC-5C84-44B4-900D-F77651737945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1A3EAC-5C84-44B4-900D-F77651737945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D5C179-7802-4781-AADC-47F2600E9F2E}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{75D5C179-7802-4781-AADC-47F2600E9F2E}.AllPlugins|Any CPU.Build.0 = Release|Any CPU
+		{75D5C179-7802-4781-AADC-47F2600E9F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D5C179-7802-4781-AADC-47F2600E9F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D49C0E8-4B17-4A24-A971-2642D4725685}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{3D49C0E8-4B17-4A24-A971-2642D4725685}.AllPlugins|Any CPU.Build.0 = Release|Any CPU
+		{3D49C0E8-4B17-4A24-A971-2642D4725685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D49C0E8-4B17-4A24-A971-2642D4725685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142518FB-C082-4BE7-88F5-67B4FADCA407}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{142518FB-C082-4BE7-88F5-67B4FADCA407}.AllPlugins|Any CPU.Build.0 = Release|Any CPU
+		{142518FB-C082-4BE7-88F5-67B4FADCA407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142518FB-C082-4BE7-88F5-67B4FADCA407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31F674F-44BF-4E61-B5D6-438EB44C1176}.AllPlugins|Any CPU.ActiveCfg = Release|Any CPU
+		{C31F674F-44BF-4E61-B5D6-438EB44C1176}.AllPlugins|Any CPU.Build.0 = Release|Any CPU
+		{C31F674F-44BF-4E61-B5D6-438EB44C1176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31F674F-44BF-4E61-B5D6-438EB44C1176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75D5C179-7802-4781-AADC-47F2600E9F2E} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
+		{3D49C0E8-4B17-4A24-A971-2642D4725685} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
+		{142518FB-C082-4BE7-88F5-67B4FADCA407} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
+		{C31F674F-44BF-4E61-B5D6-438EB44C1176} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
+		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
+		{169140CA-DA4B-4845-AADD-E31CDFF2CEDA} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
+		{BC1A3EAC-5C84-44B4-900D-F77651737945} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
+	EndGlobalSection
+EndGlobal

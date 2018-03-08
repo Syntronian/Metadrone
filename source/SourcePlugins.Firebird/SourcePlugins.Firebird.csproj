@@ -55,10 +55,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.2.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL" />
-    <Reference Include="Metadrone, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Metadrone, Version=1.1.0.0, Culture=neutral, PublicKeyToken=76ca09498bf53c53, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <ExecutableExtension>.exe</ExecutableExtension>
-      <HintPath>..\bin\Release\Metadrone.exe</HintPath>
+      <HintPath>..\SourcePlugins.MetadroneExeBuild\Metadrone.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

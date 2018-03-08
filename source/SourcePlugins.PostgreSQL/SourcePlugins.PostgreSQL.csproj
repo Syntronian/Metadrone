@@ -54,10 +54,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Metadrone, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Metadrone, Version=1.1.0.0, Culture=neutral, PublicKeyToken=76ca09498bf53c53, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <ExecutableExtension>.exe</ExecutableExtension>
-      <HintPath>..\bin\Release\Metadrone.exe</HintPath>
+      <HintPath>..\SourcePlugins.MetadroneExeBuild\Metadrone.exe</HintPath>
     </Reference>
     <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL" />
     <Reference Include="Npgsql, Version=2.0.8.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL" />

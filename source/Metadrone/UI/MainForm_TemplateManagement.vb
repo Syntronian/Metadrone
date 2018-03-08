@@ -208,7 +208,7 @@ Namespace UI
         Private Sub tvwExplorer_DeleteItem(ByVal Node As System.Windows.Forms.TreeNode) Handles tvwExplorer.DeleteItem
             If MessageBox.Show("'" & Node.Text & "' will be removed.", _
                              "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, _
-                             MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Cancel Then Exit Sub
+                             MessageBoxDefaultButton.Button2) = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
 
             'Remove tab pages first
             Call Me.RemTabPages(Node)
@@ -627,7 +627,7 @@ Namespace UI
         Friend Sub OpenProject()
             Call Me.HidePopup()
 
-            If Me.IsDirty Then If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If Me.IsDirty Then If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
 
             Try
                 Dim dlg As New System.Windows.Forms.OpenFileDialog()
@@ -739,8 +739,8 @@ Namespace UI
             End Try
         End Sub
 
-        Private Function SaveChanges(Optional ByVal TabPage As TabPage = Nothing) As Windows.Forms.DialogResult
-            If Me.tvwExplorer.Nodes.Count = 0 Then Return Windows.Forms.DialogResult.OK
+        Private Function SaveChanges(Optional ByVal TabPage As TabPage = Nothing) As System.Windows.Forms.DialogResult
+            If Me.tvwExplorer.Nodes.Count = 0 Then Return System.Windows.Forms.DialogResult.OK
 
             Dim f As New SaveChanges()
             If TabPage IsNot Nothing Then
@@ -755,7 +755,7 @@ Namespace UI
                 End If
             End If
 
-            If f.DialogResult = Windows.Forms.DialogResult.Yes Then
+            If f.DialogResult = System.Windows.Forms.DialogResult.Yes Then
                 If Me.WillSaveProject Then
                     Me.Cursor = Cursors.WaitCursor
                     If TabPage IsNot Nothing Then
@@ -773,7 +773,7 @@ Namespace UI
                     Me.Cursor = Cursors.Default
 
                 Else
-                    Return Windows.Forms.DialogResult.Cancel
+                    Return System.Windows.Forms.DialogResult.Cancel
 
                 End If
             End If

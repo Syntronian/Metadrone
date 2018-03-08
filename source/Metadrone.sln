@@ -1,21 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Metadrone", "Metadrone\Metadrone.vbproj", "{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.TextEditor", "ICSharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj", "{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{17A15092-100F-46FE-8B7A-7223C2EBF283}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{B58EBB86-145E-4034-9E47-63B6E2CE4CC3}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConsumerApp", "Tests\ConsumerApp\ConsumerApp.vbproj", "{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Metadrone", "Metadrone\Metadrone.vbproj", "{F750BDB0-4F52-442A-B9B0-1EB4E74367E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{169140CA-DA4B-4845-AADD-E31CDFF2CEDA}"
-	ProjectSection(SolutionItems) = preProject
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-		Metadrone.vsmdi = Metadrone.vsmdi
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.TextEditor", "ICSharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj", "{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConsumerApp", "Tests\ConsumerApp\ConsumerApp.vbproj", "{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Parsing", "Tests\Parsing\Parsing.vbproj", "{BC1A3EAC-5C84-44B4-900D-F77651737945}"
 EndProject
@@ -28,9 +24,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourcePlugins.SQLite", "SourcePlugins.SQLite\SourcePlugins.SQLite.csproj", "{C31F674F-44BF-4E61-B5D6-438EB44C1176}"
 EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Metadrone.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AllPlugins|Any CPU = AllPlugins|Any CPU
 		Debug|Any CPU = Debug|Any CPU
@@ -73,12 +66,17 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
+		{BC1A3EAC-5C84-44B4-900D-F77651737945} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
 		{75D5C179-7802-4781-AADC-47F2600E9F2E} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
 		{3D49C0E8-4B17-4A24-A971-2642D4725685} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
 		{142518FB-C082-4BE7-88F5-67B4FADCA407} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
 		{C31F674F-44BF-4E61-B5D6-438EB44C1176} = {17A15092-100F-46FE-8B7A-7223C2EBF283}
-		{F1ED41BE-7FB6-48C2-996B-BB7E760B7D43} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
-		{169140CA-DA4B-4845-AADD-E31CDFF2CEDA} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
-		{BC1A3EAC-5C84-44B4-900D-F77651737945} = {B58EBB86-145E-4034-9E47-63B6E2CE4CC3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC852369-29D7-4F5A-9287-545C05FD0FF4}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Metadrone.vsmdi
 	EndGlobalSection
 EndGlobal

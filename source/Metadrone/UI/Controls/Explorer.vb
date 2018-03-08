@@ -173,7 +173,7 @@ Namespace UI
 
         Private Sub mniAddNewPackage_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles mniAddNewPackage.Click
             Dim frm As New NewItem(NewItem.Types.PackageOnly, Nothing, Me.GetPackages, Me.GetSources, Nothing)
-            If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
             If frm.txtPackageName.Text.Length = 0 Then Exit Sub
 
             Call Me.AddNewPackage(frm.txtPackageName.Text)
@@ -181,7 +181,7 @@ Namespace UI
 
         Private Sub mniAddNewSource_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles mniAddNewSource.Click
             Dim frm As New NewItem(NewItem.Types.SourceOnly, Nothing, Me.GetPackages, Me.GetSources, Nothing)
-            If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
             If frm.txtDBSourceName.Text.Length = 0 Then Exit Sub
 
             Call Me.AddNewSource(frm.txtDBSourceName.Text)

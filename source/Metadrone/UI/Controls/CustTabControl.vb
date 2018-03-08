@@ -381,7 +381,7 @@ Namespace UI
         End Sub
 
         Private Sub MDTabControl_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseClick
-            If e.Button = Windows.Forms.MouseButtons.Right Then Exit Sub
+            If e.Button = System.Windows.Forms.MouseButtons.Right Then Exit Sub
             If Me.SelectedIndex = 0 Or Me.NoClosing Then Exit Sub
 
             Dim rect As Rectangle = Me.GetTabRect(Me.SelectedIndex)
@@ -394,7 +394,7 @@ Namespace UI
 
         Private Sub MDTabControl_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
             'Select tab on right mouse click
-            If e.Button = Windows.Forms.MouseButtons.Right Then
+            If e.Button = System.Windows.Forms.MouseButtons.Right Then
                 For i As Integer = 0 To Me.TabPages.Count - 1
                     If Me.GetTabRect(i).Contains(New Point(e.X, e.Y)) Then
                         Me.SelectedIndex = i
@@ -403,7 +403,7 @@ Namespace UI
                 Next
                 RaiseEvent RightClickTab(Me.SelectedIndex)
 
-            ElseIf e.Button = Windows.Forms.MouseButtons.Left Then
+            ElseIf e.Button = System.Windows.Forms.MouseButtons.Left Then
                 Me.HiLightCloseTabIndex = -1
                 For i As Integer = 0 To Me.TabCount - 1
                     Dim rect As Rectangle = Me.GetTabRect(i)
@@ -426,7 +426,7 @@ Namespace UI
 
         Private Sub MDTabControl_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
             'Left button down means a tab slide
-            If Not Me.TabsStationary And e.Button = Windows.Forms.MouseButtons.Left And Me.SelectedIndex <> 0 Then
+            If Not Me.TabsStationary And e.Button = System.Windows.Forms.MouseButtons.Left And Me.SelectedIndex <> 0 Then
                 Dim selPos As System.Drawing.Rectangle = Me.GetTabRect(Me.SelectedIndex)
                 Dim ovrPos As System.Drawing.Rectangle = Nothing
 
@@ -466,7 +466,7 @@ Namespace UI
                 Dim rect As Rectangle = Me.GetTabRect(i)
                 rect = New Rectangle(rect.X + rect.Width - 10, rect.Y, 10, 11)
                 If rect.Contains(e.Location) Then
-                    If e.Button = Windows.Forms.MouseButtons.Left Then
+                    If e.Button = System.Windows.Forms.MouseButtons.Left Then
                         Me.HiLightCloseTabIndex = -1
                         Me.HiDownCloseTabIndex = i
                     Else

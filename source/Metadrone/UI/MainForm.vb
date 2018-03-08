@@ -56,7 +56,7 @@
             'Me.txtTemplate.HidePopup()
             If Not Me.buildCompleted Then
                 If MessageBox.Show("Do you want to cancel building?", "Stil Building", MessageBoxButtons.YesNo, _
-                                   MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.Yes Then
+                                   MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = System.Windows.Forms.DialogResult.Yes Then
                     Me.main.CancelBuild()
                     While Not Me.buildCompleted
                         Application.DoEvents()
@@ -70,7 +70,7 @@
             End If
 
             If Me.IsDirty Then
-                If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then
+                If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then
                     e.Cancel = True
                 End If
             End If

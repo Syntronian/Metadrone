@@ -35,7 +35,7 @@ Namespace UI
         End Sub
 
         Private Sub tcMain_TabClosing(ByVal Tab As TabPage, ByRef Cancel As Boolean) Handles tcMain.TabClosing
-            If Me.SaveChanges(Tab) = Windows.Forms.DialogResult.Cancel Then Cancel = True
+            If Me.SaveChanges(Tab) = System.Windows.Forms.DialogResult.Cancel Then Cancel = True
         End Sub
 
         Private Sub tcMain_RightClick(ByVal SelectedTabIndex As Integer) Handles tcMain.RightClickTab
@@ -50,14 +50,14 @@ Namespace UI
         End Sub
 
         Private Sub mniCloseOtherTabs_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles mniCloseOtherTabs.Click
-            If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
             Dim tps As New List(Of TabPage)
             tps.Add(Me.tcMain.SelectedTab)
             Call Me.ClearTabs(tps)
         End Sub
 
         Private Sub mniCloseAllTabs_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles mniCloseAllTabs.Click
-            If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
             Call Me.ClearTabs(Nothing)
         End Sub
 

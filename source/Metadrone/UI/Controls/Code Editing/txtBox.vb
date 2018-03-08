@@ -500,9 +500,9 @@ Namespace UI
 
         Private Sub txtMain_MouseWheel(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles txtMain.MouseWheel
             If e.Delta > 0 Then
-                RaiseEvent Scroll(Me, New Windows.Forms.ScrollEventArgs(ScrollEventType.SmallIncrement, e.Delta))
+                RaiseEvent Scroll(Me, New System.Windows.Forms.ScrollEventArgs(ScrollEventType.SmallIncrement, e.Delta))
             Else
-                RaiseEvent Scroll(Me, New Windows.Forms.ScrollEventArgs(ScrollEventType.SmallDecrement, e.Delta))
+                RaiseEvent Scroll(Me, New System.Windows.Forms.ScrollEventArgs(ScrollEventType.SmallDecrement, e.Delta))
             End If
         End Sub
 

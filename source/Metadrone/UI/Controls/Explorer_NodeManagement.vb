@@ -163,7 +163,7 @@ Namespace UI
 
         Public Function CreateNewProject() As Boolean
             Dim frm As New NewItem(NewItem.Types.Project, Nothing, Nothing, Nothing, Nothing)
-            If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Return False
+            If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Return False
 
             Dim projectName As String = frm.txtProjectName.Text
             If String.IsNullOrEmpty(projectName) Then Return False
@@ -299,7 +299,7 @@ Namespace UI
 
             End If
 
-            If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Return False
+            If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Return False
 
             If frm.rbPackage.Checked Then
                 If frm.chkNewProject.Checked Then
@@ -308,7 +308,7 @@ Namespace UI
 
                     If CType(Me.ParentForm, MainForm).IsDirty Then
                         Select Case MessageBox.Show("Do you want to save changes?", "Save changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-                            Case Windows.Forms.DialogResult.Yes
+                            Case System.Windows.Forms.DialogResult.Yes
                                 If CType(Me.ParentForm, MainForm).WillSaveProject Then
                                     Me.Cursor = Cursors.WaitCursor
                                     For i As Integer = 0 To CType(Me.ParentForm, MainForm).tcMain.TabPages.Count - 1
@@ -318,9 +318,9 @@ Namespace UI
                                     Me.Cursor = Cursors.Default
                                 End If
 
-                            Case Windows.Forms.DialogResult.No
+                            Case System.Windows.Forms.DialogResult.No
 
-                            Case Windows.Forms.DialogResult.Cancel
+                            Case System.Windows.Forms.DialogResult.Cancel
                                 Return False
 
                         End Select
@@ -521,7 +521,7 @@ Namespace UI
             'Prompt for new template if not specified
             If Template Is Nothing Then
                 Dim frm As New NewItem(NewItem.Types.TemplateOnly, Me.GetPackageOwner(Me.tvwMain.SelectedNode), Nothing, Nothing, Nothing)
-                If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
+                If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
                 If frm.txtTemplate.Text.Length = 0 Then Exit Sub
 
                 'Add template
@@ -571,7 +571,7 @@ Namespace UI
             'Prompt for new code file if not specified
             If vb Is Nothing Then
                 Dim frm As New NewItem(NewItem.Types.VBCodeOnly, Me.GetPackageOwner(Me.tvwMain.SelectedNode), Nothing, Nothing, Nothing)
-                If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
+                If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
                 If frm.txtCodeFileName.Text.Length = 0 Then Exit Sub
 
                 'Add code file
@@ -609,7 +609,7 @@ Namespace UI
             'Prompt for new code file if not specified
             If cs Is Nothing Then
                 Dim frm As New NewItem(NewItem.Types.CSCodeOnly, Me.GetPackageOwner(Me.tvwMain.SelectedNode), Nothing, Nothing, Nothing)
-                If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then Exit Sub
+                If frm.ShowDialog = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
                 If frm.txtCodeFileName.Text.Length = 0 Then Exit Sub
 
                 'Add code file

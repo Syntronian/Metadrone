@@ -7,7 +7,7 @@
         Private Sub StartPage1_NewProject() Handles StartPage1.NewProject
             Call Me.HidePopup()
 
-            If Me.IsDirty Then If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If Me.IsDirty Then If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
 
             If Me.tvwExplorer.CreateNewProject() Then
                 Me.btnSave.Enabled = True
@@ -22,7 +22,7 @@
         Private Sub StartPage1_OpenRecent(ByVal path As String) Handles StartPage1.OpenRecent
             Call Me.HidePopup()
 
-            If Me.IsDirty Then If Me.SaveChanges() = Windows.Forms.DialogResult.Cancel Then Exit Sub
+            If Me.IsDirty Then If Me.SaveChanges() = System.Windows.Forms.DialogResult.Cancel Then Exit Sub
 
             Try
                 Me.Cursor = Cursors.WaitCursor
@@ -49,7 +49,7 @@
                 Me.Cursor = Cursors.Default
                 Dim msg As String = ex.Message & vbCrLf & vbCrLf & _
                                     "Would you like to remove this item from recents?"
-                If System.Windows.Forms.MessageBox.Show(msg, "Open Error", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) = Windows.Forms.DialogResult.Yes Then
+                If System.Windows.Forms.MessageBox.Show(msg, "Open Error", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) = System.Windows.Forms.DialogResult.Yes Then
                     'Update settings
                     Me.settings.RemoveRecent(path)
                     Call Me.settings.Save()

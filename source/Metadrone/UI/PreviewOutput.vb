@@ -207,7 +207,7 @@ Namespace UI
             If Me.packageParser.Status.ParseState = Metadrone.Parser.PackageBuilder.ParserStatus.ProcessState.Running Then
                 If MessageBox.Show("Cancel preview parsing?", "Cancel", _
                                    MessageBoxButtons.OKCancel, _
-                                   MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.OK Then
+                                   MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = System.Windows.Forms.DialogResult.OK Then
                     Me.packageParser.Stop()
                     Application.DoEvents()
 

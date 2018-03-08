@@ -29,7 +29,7 @@
                 'If just stand-alone exe, use the old crap one I made.
                 Me.txtBox = Nothing
                 Me.txtRich.Dock = DockStyle.Fill
-                Me.txtRich.BorderStyle = Windows.Forms.BorderStyle.None
+                Me.txtRich.BorderStyle = System.Windows.Forms.BorderStyle.None
                 Me.pnlMain.Controls.Add(Me.txtRich)
 
             End Try

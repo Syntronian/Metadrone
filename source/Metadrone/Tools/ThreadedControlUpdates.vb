@@ -10,7 +10,7 @@
         Private Delegate Sub SetProgressCallback(ByRef Form As Form, ByRef Bar As ProgressBar, ByVal Percentage As Double)
         Private Delegate Sub SetProgressVisibleCallback(ByRef Form As Form, ByRef Bar As ProgressBar, ByVal Visible As Boolean)
         Private Delegate Sub AddListitemCallback(ByRef Form As Form, ByRef Listbox As ListBox, ByVal Item As String)
-        Private Delegate Sub SetCursorCallback(ByRef Form As Form, ByVal Cursor As Windows.Forms.Cursor)
+        Private Delegate Sub SetCursorCallback(ByRef Form As Form, ByVal Cursor As System.Windows.Forms.Cursor)
         Private Delegate Sub CloseFormCallback(ByRef Form As Form)
         Private Delegate Sub SetPanelVisibleCallback(ByRef Panel As Panel, ByVal Visible As Boolean)
         Private Delegate Sub AddControlToContainerCallback(ByRef Container As Control, ByVal Control As Control)
@@ -110,7 +110,7 @@
             End If
         End Sub
 
-        Public Shared Sub SetCursor(ByRef Form As Form, ByVal Cursor As Windows.Forms.Cursor)
+        Public Shared Sub SetCursor(ByRef Form As Form, ByVal Cursor As System.Windows.Forms.Cursor)
             If Form.InvokeRequired Then
                 Dim d As New SetCursorCallback(AddressOf SetCursor)
                 Form.Invoke(d, New Object() {Form, Cursor})
